@@ -1,0 +1,65 @@
+.ctaSection {
+	padding: var(--space-xl) 6vw calc(var(--space-xl) + 1.5rem);
+	display: flex;
+	justify-content: center;
+}
+
+.ctaCard {
+	width: min(900px, 100%);
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: 28px;
+	padding: calc(var(--space-lg) + 0.5rem);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	box-shadow: var(--shadow-elevated);
+}
+
+.ctaKicker {
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	font-size: var(--text-kicker);
+	color: var(--color-text-primary);
+	margin: 0;
+}
+
+.ctaTitle {
+	margin: 0;
+	font-size: var(--text-h2);
+	font-family: var(--font-serif);
+	color: var(--color-text-strong);
+}
+
+.ctaSubtitle {
+	margin: 0;
+	color: var(--color-text-muted);
+	line-height: 1.7;
+}
+
+.ctaActions {
+	display: flex;
+	gap: var(--space-sm);
+	flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+	.ctaSection {
+		padding: 4rem 8vw 5rem;
+	}
+	.ctaCard {
+		padding: var(--space-lg);
+	}
+}
+
+@media (max-width: 560px) {
+	.ctaActions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.ctaActions .btnPrimary,
+	.ctaActions .btnSecondary {
+		width: 100%;
+		text-align: center;
+	}
+}

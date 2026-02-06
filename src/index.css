@@ -1,0 +1,62 @@
+@import "./styles/buttons.css";
+@font-face {
+	font-family: "inter";
+	src: url("./assets/font/Inter-VariableFont_opsz,wght.ttf")
+		format("truetype-variations");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+:root {
+	--color-text-primary: #a3a3a3;
+	--color-text-secondary: #dcdcdb;
+	--color-text-strong: #f4f4f4;
+	--color-text-muted: #b8b8b8;
+	--secondary-color: #9aff00;
+	--primary-color: #000000;
+	--main-font: "inter";
+	--color-border: rgba(255, 255, 255, 0.08);
+	--color-border-strong: rgba(255, 255, 255, 0.2);
+	--color-surface: rgba(255, 255, 255, 0.02);
+	--color-accent-border: rgba(154, 255, 0, 0.4);
+	--color-accent-soft: rgba(154, 255, 0, 0.18);
+	--color-ink: #0a0a0a;
+	--font-serif: "Cormorant Garamond", "Times New Roman", serif;
+	--font-sans: var(--main-font), system-ui, sans-serif;
+	--text-h1: clamp(2.5rem, 4vw, 4rem);
+	--text-h2: clamp(2rem, 3vw, 2.8rem);
+	--text-h3: 1.1rem;
+	--text-body: 1.05rem;
+	--text-kicker: 0.7rem;
+	--space-xs: 0.5rem;
+	--space-sm: 0.75rem;
+	--space-md: 1.25rem;
+	--space-lg: 2.5rem;
+	--space-xl: 5rem;
+	--gradient-hero:
+		radial-gradient(
+			1200px 700px at 80% -10%,
+			rgba(255, 255, 255, 0.08),
+			transparent 60%
+		),
+		linear-gradient(135deg, #090909, #121212 40%, #0b0b0b);
+	--gradient-overlay:
+		radial-gradient(
+			1200px 700px at 80% -10%,
+			rgba(255, 255, 255, 0.08),
+			transparent 60%
+		),
+		linear-gradient(135deg, #070707, #111111 40%, #0a0a0a);
+	--shadow-elevated: 0 16px 40px rgba(0, 0, 0, 0.4);
+	--shadow-accent:
+		0 18px 45px rgba(154, 255, 0, 0.28), 0 0 25px rgba(154, 255, 0, 0.18);
+	--shadow-accent-soft: 0 10px 28px rgba(154, 255, 0, 0.12);
+}
+
+body {
+	background: var(--primary-color);
+	font-family: var(--font-sans);
+	color: var(--color-text-secondary);
+	min-height: 100vh;
+	margin: 0;
+}

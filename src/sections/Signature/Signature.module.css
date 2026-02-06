@@ -1,0 +1,86 @@
+.signatureSection {
+	padding: var(--space-xl) 6vw calc(var(--space-xl) + 1rem);
+	color: var(--color-text-secondary);
+}
+
+.signatureIntro {
+	max-width: 520px;
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	margin-bottom: var(--space-lg);
+}
+
+.signatureKicker {
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	font-size: var(--text-kicker);
+	color: var(--color-text-primary);
+	margin: 0;
+}
+
+.signatureTitle {
+	margin: 0;
+	font-size: var(--text-h2);
+	font-family: var(--font-serif);
+	color: var(--color-text-strong);
+}
+
+.signatureSubtitle {
+	margin: 0;
+	color: var(--color-text-muted);
+	line-height: 1.7;
+}
+
+.signatureGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: var(--space-md);
+}
+
+.signatureCard {
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	padding: var(--space-md);
+	border-radius: 20px;
+	min-height: 160px;
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	opacity: 0;
+	transform: translateY(24px);
+	filter: blur(6px);
+	transition:
+		opacity 500ms ease,
+		transform 500ms ease,
+		filter 500ms ease,
+		border 200ms ease,
+		box-shadow 200ms ease;
+}
+
+.signatureCard:hover {
+	transform: translateY(-4px);
+	border-color: var(--color-accent-border);
+	box-shadow: var(--shadow-elevated);
+}
+
+.cardTitle {
+	margin: 0;
+	font-size: var(--text-h3);
+	color: var(--color-text-strong);
+}
+
+.cardText {
+	margin: 0;
+	color: var(--color-text-muted);
+	line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+	.signatureSection {
+		padding: 4rem 8vw 5rem;
+	}
+	.signatureCard {
+		min-height: auto;
+	}
+}
