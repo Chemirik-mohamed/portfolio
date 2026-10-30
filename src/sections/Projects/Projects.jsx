@@ -78,6 +78,18 @@ const projects = [
 		preview: "https://haunted-house-green-xi.vercel.app/",
 	},
 	{
+		title: "Sonara",
+		description:
+			"Une application de synthèse vocale : saisie d’un texte, génération audio, écoute dans le navigateur et téléchargement du fichier.",
+		tags: ["React", "TypeScript", "Synthèse vocale", "Better Auth"],
+		link: "https://github.com/Chemirik-mohamed/sonara_front",
+		kind: "Application web",
+		image: "/images/sonara.webp",
+		imageWidth: 2838,
+		imageHeight: 1940,
+		linkLabel: "Voir le code sur GitHub",
+	},
+	{
 		title: "Delaune Pizza",
 		description:
 			"Un site pour une pizzeria à Échirolles, avec une présentation du restaurant et de son offre.",
