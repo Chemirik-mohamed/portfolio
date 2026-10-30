@@ -24,6 +24,9 @@
 }
 
 .footerLink {
+	min-height: 2.75rem;
+	display: inline-flex;
+	align-items: center;
 	text-decoration: none;
 	color: var(--color-text-strong);
 	border-bottom: 1px solid transparent;

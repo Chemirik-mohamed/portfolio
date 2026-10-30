@@ -22,7 +22,7 @@ export function Navbar() {
 		if (activeOverlay) {
 			gsap.set(overlay, { pointerEvents: "auto" });
 			gsap.to(overlay, {
-				height: "100vh",
+				height: "100dvh",
 				duration: 0.6,
 				ease: "power3.out",
 			});

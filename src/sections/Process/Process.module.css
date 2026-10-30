@@ -1,5 +1,5 @@
 .processSection {
-	padding: var(--space-xl) 6vw calc(var(--space-xl) + 1rem);
+	padding: 4rem 7vw 5rem;
 	color: var(--color-text-secondary);
 }
 
@@ -34,7 +34,7 @@
 
 .processGrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	grid-template-columns: minmax(0, 1fr);
 	gap: var(--space-md);
 }
 
@@ -77,8 +77,11 @@
 	line-height: 1.6;
 }
 
-@media (max-width: 720px) {
+@media (min-width: 768px) {
 	.processSection {
-		padding: 4rem 8vw 5rem;
+		padding: var(--space-xl) 6vw calc(var(--space-xl) + 1rem);
+	}
+	.processGrid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 }

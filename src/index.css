@@ -53,6 +53,12 @@
 	--shadow-accent-soft: 0 10px 28px rgba(154, 255, 0, 0.12);
 }
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body {
 	background: var(--primary-color);
 	font-family: var(--font-sans);
@@ -67,4 +73,23 @@ body {
 #about,
 #contact {
 	scroll-margin-top: 6rem;
+}
+
+button,
+a {
+	touch-action: manipulation;
+}
+
+:focus-visible {
+	outline: 2px solid var(--secondary-color);
+	outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition: none !important;
+	}
 }

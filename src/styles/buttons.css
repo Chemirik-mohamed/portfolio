@@ -1,3 +1,9 @@
+.btnPrimary,
+.btnSecondary {
+	min-height: 2.75rem;
+	max-width: 100%;
+	white-space: normal;
+}
 .btnPrimary {
 	background: var(--secondary-color);
 	color: var(--color-ink);

@@ -5,7 +5,7 @@
 	padding: 0 6vw;
 	background: transparent;
 	color: var(--color-text-secondary);
-	height: 56px;
+	min-height: 4rem;
 	position: sticky;
 	top: 0;
 	z-index: 10;
@@ -17,20 +17,24 @@
 	flex: 0 0 auto;
 	display: flex;
 	align-items: center;
-	height: 100%;
+	min-height: 2.75rem;
 }
 .logoImg {
 	height: 42px;
 	width: auto;
 }
 .navbarLinks {
-	width: 50%;
-	display: flex;
+	display: none;
+	flex: 1;
+	min-width: 0;
 	align-items: center;
 	justify-content: center;
 	gap: var(--space-md);
 }
 .link {
+	min-height: 2.75rem;
+	display: inline-flex;
+	align-items: center;
 	text-decoration: none;
 	color: var(--color-text-secondary);
 	letter-spacing: 0.02em;
@@ -53,6 +57,8 @@
 	transform: scaleX(1);
 }
 .navbarButton {
+	display: none;
+	min-height: 2.75rem;
 	background: transparent;
 	border: 1px solid var(--color-border-strong);
 	color: var(--color-text-secondary);
@@ -69,12 +75,12 @@
 }
 
 .menuButton {
-	display: none;
+	display: inline-flex;
 	background: transparent;
 	border: 1px solid var(--color-border-strong);
 	color: var(--color-text-secondary);
-	width: 36px;
-	height: 36px;
+	width: 2.75rem;
+	height: 2.75rem;
 	border-radius: 999px;
 	cursor: pointer;
 	align-items: center;
@@ -97,7 +103,8 @@
 	height: 0vh;
 	background: var(--gradient-overlay);
 	z-index: 20;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -132,8 +139,8 @@
 	background: transparent;
 	border: 1px solid var(--color-border-strong);
 	color: var(--color-text-secondary);
-	width: 38px;
-	height: 38px;
+	width: 2.75rem;
+	height: 2.75rem;
 	border-radius: 999px;
 	cursor: pointer;
 	display: inline-flex;
@@ -177,46 +184,28 @@
 	display: inline-block;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 1024px) {
 	.navbarLinks {
-		width: 60%;
-		gap: 1.5rem;
-	}
-}
-
-@media (max-width: 720px) {
-	.navbar {
-		flex-wrap: wrap;
-		height: auto;
-		padding: 0.75rem 6vw 1rem;
-	}
-	.navbarlogo {
-		order: 1;
-		flex: 0 0 auto;
+		display: flex;
 	}
 	.navbarButton {
-		display: none;
-		order: 2;
-		flex: 0 0 auto;
-	}
-	.navbarLinks {
-		display: none;
+		display: inline-block;
 	}
 	.menuButton {
-		order: 3;
-		display: inline-flex;
-	}
-	.link {
-		font-size: 0.9rem;
+		display: none;
 	}
 }
-
-@media (max-width: 520px) {
-	.navbarLinks {
-		padding: 1.25rem 6vw 1.5rem;
+@media (orientation: landscape) and (max-height: 500px) {
+	.fullscreenOverlay {
+		align-items: flex-start;
 	}
-	.navbarButton {
-		padding: 0.55rem 1rem;
-		font-size: 0.85rem;
+	.overlayContent {
+		padding-block: 1rem;
+	}
+	.overlayMenu {
+		gap: 0.5rem;
+	}
+	.overlayLink {
+		font-size: 1.4rem;
 	}
 }
