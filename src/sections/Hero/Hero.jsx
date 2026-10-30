@@ -41,8 +41,8 @@ export function Hero() {
 				<p className={styles.headerKicker}>Portfolio</p>
 				<h1 className={styles.headerTitle}>Développeur Full-Stack</h1>
 				<p className={styles.headerSubtitle}>
-					Je conçois des expériences web immersives et des interfaces 3D avec
-					Three.js.
+					Je développe des applications web complètes, de l’interface React
+					aux API, jusqu’à la mise en production.
 				</p>
 				<div className={styles.headerActions}>
 					<button
