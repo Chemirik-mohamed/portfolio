@@ -1,6 +1,5 @@
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import logoKyros from "../../assets/image/logo-kyros.png";
 import { useOverlay } from "../../context/OverlayContext";
 import { IconWrap } from "../IconWrap/IconWrap";
@@ -94,9 +93,10 @@ export function Navbar() {
 	};
 
 	const menuLinks = [
-		{ to: "/", label: "Accueil" },
-		{ to: "/about", label: "À propos" },
-		{ to: "/contact", label: "Contact" },
+		{ to: "#home", label: "Accueil" },
+		{ to: "#projects", label: "Projets" },
+		{ to: "#about", label: "À propos" },
+		{ to: "#contact", label: "Contact" },
 	];
 
 	return (
@@ -106,17 +106,19 @@ export function Navbar() {
 			</div>
 			<div className={styles.navbarLinks}>
 				{menuLinks.map((link) => (
-					<Link key={link.to} className={styles.link} to={link.to}>
+					<a key={link.to} className={styles.link} href={link.to}>
 						{link.label}
-					</Link>
+					</a>
 				))}
 			</div>
 			<button
 				type="button"
 				className={styles.navbarButton}
-				onClick={() => openOverlay("project")}
+				onClick={() => {
+					window.location.href = "mailto:chemirik@icloud.com";
+				}}
 			>
-				Démarrer un projet
+				Me contacter
 			</button>
 			<button
 				type="button"
@@ -135,7 +137,7 @@ export function Navbar() {
 				<div ref={overlayContentRef} className={styles.overlayContent}>
 					<div className={styles.overlayTop}>
 						<p className={styles.overlayKicker}>
-							{activeOverlay === "menu" ? "Menu" : "Démarrer un projet"}
+							{activeOverlay === "menu" ? "Menu" : "Me contacter"}
 						</p>
 						<button
 							type="button"
@@ -149,9 +151,14 @@ export function Navbar() {
 					{activeOverlay === "menu" && (
 						<div ref={overlayMenuRef} className={styles.overlayMenu}>
 							{menuLinks.map((link) => (
-								<Link key={link.to} className={styles.overlayLink} to={link.to}>
+								<a
+									key={link.to}
+									className={styles.overlayLink}
+									href={link.to}
+									onClick={closeOverlay}
+								>
 									{renderLetters(link.label)}
-								</Link>
+								</a>
 							))}
 						</div>
 					)}

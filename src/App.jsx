@@ -1,7 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout";
-import { About } from "./pages/About";
-import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 
 export function App() {
@@ -9,8 +7,8 @@ export function App() {
 		<Routes>
 			<Route path="/" element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="about" element={<About />} />
-				<Route path="contact" element={<Contact />} />
+				<Route path="about" element={<Navigate to="/#about" replace />} />
+				<Route path="contact" element={<Navigate to="/#contact" replace />} />
 			</Route>
 		</Routes>
 	);

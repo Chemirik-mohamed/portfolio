@@ -60,3 +60,11 @@ body {
 	min-height: 100vh;
 	margin: 0;
 }
+
+/* Keep section headings clear of the sticky navigation. */
+#home,
+#projects,
+#about,
+#contact {
+	scroll-margin-top: 6rem;
+}

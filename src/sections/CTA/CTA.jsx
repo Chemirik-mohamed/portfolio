@@ -1,31 +1,47 @@
-import { useOverlay } from "../../context/OverlayContext";
 import styles from "./CTA.module.css";
 
 export function CTA() {
-	const { openOverlay } = useOverlay();
-
 	return (
-		<section className={styles.ctaSection}>
+		<section
+			id="contact"
+			className={styles.ctaSection}
+			aria-labelledby="contact-title"
+		>
 			<div className={styles.ctaCard}>
-				<p className={styles.ctaKicker}>Prêt à démarrer</p>
-				<h2 className={styles.ctaTitle}>
-					Construisons quelque chose de précis.
+				<p className={styles.ctaKicker}>Contact</p>
+				<h2 id="contact-title" className={styles.ctaTitle}>
+					Échangeons sur votre équipe et vos projets.
 				</h2>
 				<p className={styles.ctaSubtitle}>
-					Parlez‑moi de votre idée, du planning et de vos objectifs. Je vous
-					réponds avec un plan clair.
+					Vous recherchez un développeur web ? Contactez-moi à l’adresse{" "}
+					<a href="mailto:chemirik@icloud.com">chemirik@icloud.com</a>.
 				</p>
 				<div className={styles.ctaActions}>
 					<button
 						type="button"
 						className="btnPrimary"
-						onClick={() => openOverlay("project")}
+						onClick={() => {
+							window.location.href = "mailto:chemirik@icloud.com";
+						}}
 					>
-						Démarrer un projet
+						Me contacter
 					</button>
-					<button type="button" className="btnSecondary">
-						Envoyer un message
-					</button>
+					<a
+						className="btnSecondary"
+						href="https://www.linkedin.com/in/mohamed-chemirik-49b99a286/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						LinkedIn
+					</a>
+					<a
+						className="btnSecondary"
+						href="https://github.com/Chemirik-mohamed"
+						target="_blank"
+						rel="noreferrer"
+					>
+						GitHub
+					</a>
 				</div>
 			</div>
 		</section>

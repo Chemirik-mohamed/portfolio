@@ -1,74 +1,62 @@
 .aboutPage {
+	padding: 4rem 7vw 5rem;
 	color: var(--color-text-secondary);
 }
 
-.aboutHero {
-	padding: var(--space-xl) 6vw 4rem;
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-sm);
-	max-width: 820px;
-}
-
-.aboutKicker {
-	letter-spacing: 0.3em;
-	text-transform: uppercase;
-	font-size: var(--text-kicker);
-	color: var(--color-text-primary);
-	margin: 0;
+.aboutIntro {
+	display: grid;
+	gap: 2rem;
 }
 
 .aboutTitle {
 	margin: 0;
-	font-size: var(--text-h1);
-	font-family: var(--font-serif);
+	font-size: var(--text-h2);
+	font-family: var(--font-sans);
+	font-weight: 500;
+	letter-spacing: -0.04em;
+	line-height: 1.15;
 	color: var(--color-text-strong);
 }
 
-.aboutSubtitle {
-	margin: 0;
-	color: var(--color-text-muted);
+.aboutRole {
+	margin: 1rem 0 0;
+	font-size: 0.85rem;
 	line-height: 1.7;
+	color: var(--color-text-primary);
+}
+
+.aboutStory {
+	max-width: 65ch;
+}
+
+.aboutStory > p {
+	margin: 0 0 1.25rem;
 	font-size: var(--text-body);
+	color: var(--color-text-muted);
+	line-height: 1.85;
 }
 
 .aboutActions {
 	display: flex;
-	gap: var(--space-sm);
 	flex-wrap: wrap;
+	margin-top: 1.75rem;
 }
 
-.aboutContent {
-	padding: 0 6vw calc(var(--space-xl) + 1rem);
-	display: grid;
-	grid-template-columns: minmax(0, 1fr);
-	gap: var(--space-md);
-}
-
-.aboutBlock {
-	background: var(--color-surface);
-	border: 1px solid var(--color-border);
-	padding: var(--space-md);
-	border-radius: 22px;
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-sm);
-	min-height: 200px;
+.aboutActions button {
+	min-height: 2.75rem;
 }
 
 .blockTitle {
 	margin: 0;
 	font-size: var(--text-h3);
+	font-weight: 500;
 	color: var(--color-text-strong);
 }
 
-.blockText {
-	margin: 0;
-	color: var(--color-text-muted);
-	line-height: 1.6;
-}
-
 .stackGrid {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
@@ -80,25 +68,52 @@
 	font-size: 0.75rem;
 	color: var(--color-text-secondary);
 	border: 1px solid var(--color-border);
+	line-height: 1.6;
 }
 
-@media (max-width: 720px) {
-	.aboutHero {
-		padding: 4.5rem 8vw 3rem;
-	}
-	.aboutContent {
-		padding: 0 8vw 5rem;
-	}
+.skillsSection {
+	margin-top: 3rem;
 }
 
-@media (max-width: 560px) {
-	.aboutActions {
-		flex-direction: column;
-		align-items: stretch;
+.skillsList {
+	margin: var(--space-md) 0 0;
+}
+
+.skillGroup {
+	display: grid;
+	gap: var(--space-sm);
+	padding: 1.5rem 0;
+	border-top: 1px solid var(--color-border);
+}
+
+.skillTitle {
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--color-text-strong);
+}
+
+.skillDescription {
+	margin: 0;
+	min-width: 0;
+}
+
+@media (min-width: 768px) {
+	.aboutPage {
+		padding: var(--space-xl) 6vw calc(var(--space-xl) + 1rem);
 	}
-	.aboutActions .btnPrimary,
-	.aboutActions .btnSecondary {
-		width: 100%;
-		text-align: center;
+
+	.aboutIntro {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+		gap: 3rem;
+	}
+
+	.skillGroup {
+		grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+		gap: var(--space-md);
+		align-items: baseline;
+	}
+
+	.skillsSection {
+		margin-top: 4rem;
 	}
 }

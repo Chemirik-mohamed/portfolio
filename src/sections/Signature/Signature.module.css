@@ -1,86 +1,77 @@
 .signatureSection {
-	padding: var(--space-xl) 6vw calc(var(--space-xl) + 1rem);
+	padding: 4rem 7vw 5rem;
 	color: var(--color-text-secondary);
 }
 
 .signatureIntro {
-	max-width: 520px;
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-sm);
-	margin-bottom: var(--space-lg);
-}
-
-.signatureKicker {
-	letter-spacing: 0.3em;
-	text-transform: uppercase;
-	font-size: var(--text-kicker);
-	color: var(--color-text-primary);
-	margin: 0;
+	max-width: 38rem;
+	margin-bottom: 2.5rem;
 }
 
 .signatureTitle {
 	margin: 0;
 	font-size: var(--text-h2);
-	font-family: var(--font-serif);
+	font-family: var(--font-sans);
+	font-weight: 500;
+	letter-spacing: -0.04em;
+	line-height: 1.15;
 	color: var(--color-text-strong);
 }
 
 .signatureSubtitle {
-	margin: 0;
+	margin: 1rem 0 0;
 	color: var(--color-text-muted);
-	line-height: 1.7;
+	line-height: 1.75;
+	max-width: 48ch;
 }
 
 .signatureGrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-	gap: var(--space-md);
+	grid-template-columns: minmax(0, 1fr);
+	gap: 2rem;
 }
 
 .signatureCard {
-	background: var(--color-surface);
-	border: 1px solid var(--color-border);
-	padding: var(--space-md);
-	border-radius: 20px;
-	min-height: 160px;
+	border-top: 1px solid var(--color-accent-border);
+	padding-top: 1.5rem;
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-sm);
-	opacity: 0;
-	transform: translateY(24px);
-	filter: blur(6px);
-	transition:
-		opacity 500ms ease,
-		transform 500ms ease,
-		filter 500ms ease,
-		border 200ms ease,
-		box-shadow 200ms ease;
-}
-
-.signatureCard:hover {
-	transform: translateY(-4px);
-	border-color: var(--color-accent-border);
-	box-shadow: var(--shadow-elevated);
+	gap: 1rem;
+	min-width: 0;
 }
 
 .cardTitle {
 	margin: 0;
-	font-size: var(--text-h3);
+	font-size: 1.15rem;
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	line-height: 1.4;
 	color: var(--color-text-strong);
 }
 
 .cardText {
 	margin: 0;
 	color: var(--color-text-muted);
-	line-height: 1.6;
+	font-size: 0.95rem;
+	line-height: 1.8;
+	max-width: 55ch;
 }
 
-@media (max-width: 720px) {
+.cardExample {
+	margin: auto 0 0;
+	padding-top: 0.75rem;
+	color: var(--color-text-primary);
+	font-size: 0.8rem;
+	line-height: 1.7;
+}
+
+@media (min-width: 768px) {
 	.signatureSection {
-		padding: 4rem 8vw 5rem;
+		padding: var(--space-xl) 6vw calc(var(--space-xl) + 1rem);
 	}
-	.signatureCard {
-		min-height: auto;
+
+	.signatureGrid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: clamp(1.5rem, 3vw, 3rem);
 	}
 }

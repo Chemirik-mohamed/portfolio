@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { useOverlay } from "../../context/OverlayContext";
 import styles from "./Hero.module.css";
 
 export function Hero() {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 	const [isHovering, setIsHovering] = useState(false);
-	const { openOverlay } = useOverlay();
 
 	const scrollToProjects = () => {
 		const section = document.getElementById("projects");
@@ -50,9 +48,11 @@ export function Hero() {
 					<button
 						type="button"
 						className={`${styles.heroButton} btnPrimary`}
-						onClick={() => openOverlay("project")}
+						onClick={() => {
+							window.location.href = "mailto:chemirik@icloud.com";
+						}}
 					>
-						Démarrer un projet
+						Me contacter
 					</button>
 					<button
 						type="button"
