@@ -37,7 +37,7 @@ export function Signature() {
 						permissions.
 					</p>
 					<p className={styles.cardExample}>
-						Dans Off-grid : calcul de consommation et API TypeScript.
+						Dans Off-grid : calcul de consommation et back-end TypeScript du SaaS.
 					</p>
 				</article>
 				<article className={styles.signatureCard}>

@@ -19,10 +19,10 @@ const projects = [
 	{
 		title: "Off-grid",
 		description:
-			"Une API pour des projets solaires, avec calcul de consommation électrique, gestion des appareils et intégration des données PVGIS.",
+			"Un SaaS pour dimensionner des projets solaires en autonomie : calcul de consommation électrique, gestion des appareils et intégration des données PVGIS, avec un front et un back.",
 		tags: ["TypeScript", "Express", "PostgreSQL", "Prisma"],
 		link: "https://github.com/Chemirik-mohamed/offgrid-back",
-		kind: "Back-End",
+		kind: "Full‑Stack",
 		image: "/images/offgrid.webp",
 		imageWidth: 3408,
 		imageHeight: 1782,
